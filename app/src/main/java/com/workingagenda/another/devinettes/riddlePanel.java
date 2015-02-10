@@ -97,7 +97,6 @@ public class riddlePanel extends Activity {
         words.setText(mRiddles[key]);
 
         Typeface Dejatf = Typeface.createFromAsset(getAssets(),"fonts/DejaVuSansCondensed.ttf");
-        Typeface tf = Typeface.createFromAsset(getAssets(),"fonts/lane.ttf");
         words.setTypeface(Dejatf);
         btnGuess.setTypeface(Dejatf);
         //btnEnlarge.setTypeface(tf);
@@ -196,7 +195,6 @@ public class riddlePanel extends Activity {
             Intent intent = new Intent(this, riddleList.class);
             intent.putExtra("counter", count);
             startActivityForResult(intent, ACTIVITY_LIST);
-            //setResult(RESULT_OK);
             finish();
             return true;
         }

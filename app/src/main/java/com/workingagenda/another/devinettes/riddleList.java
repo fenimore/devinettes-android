@@ -46,7 +46,6 @@ public class riddleList extends Activity {
     private static final int ACTIVITY_LOAD=0;
 
     private ListView rListView ;
-    private ArrayAdapter<String> listAdapter ;
     String[] riddleTitles;
     public boolean[] truthArray = new boolean[16];
     private final static String Preferences = "MyPrefs";
@@ -106,16 +105,25 @@ public class riddleList extends Activity {
      * TODO: replace this with a custom adapter?
      */
     public void fillList() {
+
         // Affirm the ListView and Array[] to fill it
-        //Create an Array List, and fill it with the Array[]
+//Create an Array List, and fill it with the Array[]
         riddleTitles = getResources().getStringArray(R.array.riddleTitles);
         rListView = (ListView) findViewById(R.id.listView);
         ArrayList<String> riddleList = new ArrayList<String>();
         riddleList.addAll(Arrays.asList(riddleTitles));
-        // Create ArrayAdapter using the row layout and the declared Array List
-        listAdapter = new ArrayAdapter<String>(this, R.layout.list_row, riddleList);
-        // Set the ArrayAdapter as the ListView's adapter. Fill the Layout
-        rListView.setAdapter(listAdapter);
+// Create ArrayAdapter using the row layout and the declared Array List
+        //listAdapter = new ArrayAdapter<String>(this, R.layout.list_row, riddleList);
+// Set the ArrayAdapter as the ListView's adapter. Fill the Layout
+        //rListView.setAdapter(listAdapter);
+
+
+// get data from the table by the ListAdapter
+        riddleAdapter customAdapter = new riddleAdapter(this, R.layout.list_row, riddleList);
+        customAdapter.setTruthCheck(truthArray);
+        rListView.setAdapter(customAdapter);
+
+
     }
 
     /**
@@ -213,6 +221,9 @@ public class riddleList extends Activity {
 
     public boolean[] returnArray(){
         return this.truthArray;
+    }
+    public String[] returnTitles(){
+        return this.riddleTitles;
     }
 
 
