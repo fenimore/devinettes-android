@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.workingagenda.another.devinettes"
+    android:versionCode="3"
+    android:versionName="2.5" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/sphinx_launcher_grey"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Actionbarstyle" >
+        <activity
+            android:name="com.workingagenda.another.devinettes.riddleList"
+            android:label="@string/app_name"
+            android:icon="@drawable/sphinx_icon_small">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.workingagenda.another.devinettes.riddlePanel"
+            android:icon="@drawable/noun_puz_two"
+            android:label="My Dearest Vexxed"/>
+    </application>
+
+</manifest>

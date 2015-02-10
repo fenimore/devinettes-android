@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Devinettes</string>
+
+    <string name="action_help">Help</string>
+    <string name="action_score">Score</string>
+
+    <string name="help_text">Credits can be accessed by long clicking a riddle title. Long click a riddle text or title in order to check whether it has been solved\n\nChecks, cash, and bitcoin will be accepted for tips, hints, or answers.\n\nFeedback is appreciated.\n\nThe source is on github: https://github.com/exorableludos/devinettes-android.\n\nContact the riddlers at: exorable.ludos@gmail.com</string>
+
+    <string-array name="riddleTitles">
+        <item>The sphinx</item>
+        <item>This common currency</item>
+        <item>When there is one</item>
+        <item>My warmth connects</item>
+        <item>What coat or crust</item>
+        <item>Where, close at hand</item>
+        <item>What ancient war</item>
+        <item>Found in heaps</item>
+        <item>Without you I am incomplete (1)</item>
+        <item>Without you I am incomplete (2)</item>
+        <item>What\'s the secret</item>
+        <item>This: brought by man</item>
+        <item>Name your heroine after me</item>
+        <item>Name me the skin</item>
+        <item>Recursion here</item>
+        <item>Name me the house</item>
+    </string-array>
+
+    <string-array name="credits">
+        <item>sophocles</item>
+        <item>ludos 2013</item>
+        <item>ludos 2012</item>
+        <item>ludos 2013</item>
+        <item>ludos 2012</item>
+        <item>rufus &amp; ludos 2010</item>
+        <item>rufus &amp; ludos 2010</item>
+        <item>mobia &amp; ludos 2012</item>
+        <item>mobia &amp; ludos 2012 </item>
+        <item>mobia &amp; ludos 2012</item>
+        <item>rufus 2010</item>
+        <item>rufus 2010</item>
+        <item>mobia 2012</item>
+        <item>rufus 2012</item>
+        <item>rufus 2013</item>
+        <item>rufus 2013</item>
+    </string-array>
+    <string-array name="answers">
+        <item>d787f56b080945c1ec0b3343cbf962ca427bb8ef</item>
+        <item>e9a38c050834263fce81375d8e3dcdbeec80b082</item>
+        <item>c09a2565eb3e551d0b33b3f5111b7fd0b90263f4</item>
+        <item>06ea4987e7621b4ff0995777aadbdd01c2fe5262</item>
+        <item>cc86fbef6659b4c929f80b139294e11a5bd44269</item>
+        <item>c8d3756e45b644ce8b817869739736d39c31e30e</item>
+        <item>8fe63c015a9b530b576c408f8e25c043967ef67b</item>
+        <item>b65840c9c035ddad29c5a0e3f64428d4d5271c16</item>
+        <item>b295d117135a9763da282e7dae73a5ca7d3e5b11</item>
+        <item>64356bcfae350c970263c1ce575185b289f7b836</item>
+        <item>ecefe3a4d0a5737a74471c289c787880772a293a</item>
+        <item>0feca720e2c29dafb2c900713ba560e03b758711</item>
+        <item>0f91787c8088296ea1439e159e4845b7b4cb5df5</item>
+        <item>6dd0fe8001145bec4a12d0e22da711c4970d000b</item>
+        <item>818533aa876aa97624377a7b0b2d3de3acc2813b</item>
+        <item>a30ac4b391ead62c7ab2ea84fadf2f8ede6fbf6c</item>
+    </string-array>
+    <string-array name="answersTwo">
+    </string-array>
+    <string-array name="riddles">
+        <item>It walks on four legs in the morning\nTwo legs in the afternoon\nAnd three legs at night.\nWhat is it?</item>
+        <item>Without this common currency,\nCries are quieted, food is bland,\nAll light will lose transparency\nAnd numbness stuns your hand.</item>
+        <item>When there is one, it is stood up \nWhen there are two, they\'ve both been true \nWhen there are seven, it is creation \nWhen they\'ve past, their record lasts.</item>
+        <item>My warmth connects from far to wide,\nNevertheless, I too divide.\nI am the greatest of my kind;\nMy value, zero, will never rise.</item>
+        <item>What coat or crust is always worn\nIn winter when my hair has shed\nAnd blossom season, when I\'m warm\nAnd hair\'s again atop my head.</item>
+        <item>My dearest vexxed, where, close at hand,\nDo suited men mean royalty,\nWhere one defector from the band\nMay forfeit all their quality?</item>
+        <item>What ancient war, played out in duels,\nThough set aside, is never won,\nDespite the fall of kings to fools\nAnd tragically neglected pun?</item>
+        <item>Found in heaps of equine cuisine.\nYou poke my eye and guide me well,\nLed beneath, lest my mark be seen.\nI wound! Yet heal! None need tell.</item>
+        <item>Without you I am incomplete\nYou, the earth´s most tasteful treasure,\nI, the opposite of sweet\nIn harmony we come together.</item>
+        <item>Without you I am incomplete\nYou dry your tears and come ashore\nYou white, I black, at last we meet\nBetter to wed than to be pure.</item>
+        <item>What\'s the secret to this question\nWhich seems to mean to little?\nYou think you know but think again,\nThe answer is a riddle.</item>
+        <item>This: brought by man into the world,\nThing unthinkable, yet present:\nNor God, nor Love, nor Mind unfurled,\nThe trick? The answer isn\'t.</item>
+        <item>Name your heroine after me\nOr count your chances, set her free.\nOr make a chain to bind her near\nMy life is short, your love is dear.</item>
+        <item>Name me the skin you cannot touch\nNor taste so long as five is five\nWhich fills the fields -- we call them such --\nWe spectate all our waking lives.</item>
+        <item>Recursion here where wont was more:\nMask without a face, coin without wealth.\nNow the think you\'re looking for\nIs nothing other than itself.</item>
+        <item>Name me the house without window,\nThe oldest kind, with but one room.\nThere you\'ll find me in the shadow,\nWaiting for my soul to bloom.</item>
+    </string-array>
+
+</resources>
