@@ -48,7 +48,7 @@ public class riddleList extends Activity {
     private ListView rListView ;
     private ArrayAdapter<String> listAdapter ;
     String[] riddleTitles;
-    boolean[] truthArray = new boolean[16];
+    public boolean[] truthArray = new boolean[16];
     private final static String Preferences = "MyPrefs";
 
     @Override
@@ -143,6 +143,7 @@ public class riddleList extends Activity {
         for(int i = 0; i<16; i++){
             String keyX = "nameKey" + i;
             truthArray[i] = savedScore.getBoolean(keyX, false);
+            //riddleModel mriddleModel = new riddleModel(i, truthArray[i]);
         }
     }
 
@@ -208,6 +209,10 @@ public class riddleList extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
+    }
+
+    public boolean[] returnArray(){
+        return this.truthArray;
     }
 
 
