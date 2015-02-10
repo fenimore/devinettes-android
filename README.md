@@ -6,11 +6,10 @@ Email exorableludos@gmail.com to get in touch with the riddlers.
 
 
 #TODO
-Custom list adapter
 Submit Button
 Enter Button
 Add riddles
-Simplify the Font (lean the memory usage)
+
 
 
 #License
