@@ -74,7 +74,7 @@ public class riddlePanel extends Activity {
     ImageButton btnEnlarge;
 
     //Truth array and shared preferences is for tracking the score
-    public boolean truthArray[] = new boolean[16];
+    public boolean truthArray[] = new boolean[18];
     public static final String Preferences = "MyPrefs" ;
 
     @Override
@@ -99,7 +99,6 @@ public class riddlePanel extends Activity {
         Typeface Dejatf = Typeface.createFromAsset(getAssets(),"fonts/DejaVuSansCondensed.ttf");
         words.setTypeface(Dejatf);
         btnGuess.setTypeface(Dejatf);
-        //btnEnlarge.setTypeface(tf);
 
         loadScoreData();
 
@@ -156,7 +155,7 @@ public class riddlePanel extends Activity {
      */
     public void loadScoreData() {
         SharedPreferences savedScore = getSharedPreferences(Preferences, Context.MODE_PRIVATE);
-        for(int i = 0; i<16; i++){
+        for(int i = 0; i<18; i++){
             String keyX = "nameKey" + i;
             truthArray[i] = savedScore.getBoolean(keyX, false);
         }
@@ -165,7 +164,7 @@ public class riddlePanel extends Activity {
         SharedPreferences savedScore;
         savedScore = getSharedPreferences(Preferences, 0);
         SharedPreferences.Editor editor = savedScore.edit();
-        for(int i = 0; i<16; i++){
+        for(int i = 0; i<18; i++){
             String keyX = "nameKey" + i;
             editor.putBoolean(keyX, truthArray[i]);
         }

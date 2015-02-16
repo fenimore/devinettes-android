@@ -47,7 +47,7 @@ public class riddleList extends Activity {
 
     private ListView rListView ;
     String[] riddleTitles;
-    public boolean[] truthArray = new boolean[16];
+    public boolean[] truthArray = new boolean[18];
     private final static String Preferences = "MyPrefs";
 
     @Override
@@ -106,19 +106,10 @@ public class riddleList extends Activity {
      */
     public void fillList() {
 
-        // Affirm the ListView and Array[] to fill it
-//Create an Array List, and fill it with the Array[]
         riddleTitles = getResources().getStringArray(R.array.riddleTitles);
         rListView = (ListView) findViewById(R.id.listView);
         ArrayList<String> riddleList = new ArrayList<String>();
         riddleList.addAll(Arrays.asList(riddleTitles));
-// Create ArrayAdapter using the row layout and the declared Array List
-        //listAdapter = new ArrayAdapter<String>(this, R.layout.list_row, riddleList);
-// Set the ArrayAdapter as the ListView's adapter. Fill the Layout
-        //rListView.setAdapter(listAdapter);
-
-
-// get data from the table by the ListAdapter
         riddleAdapter customAdapter = new riddleAdapter(this, R.layout.list_row, riddleList);
         customAdapter.setTruthCheck(truthArray);
         rListView.setAdapter(customAdapter);
@@ -135,7 +126,7 @@ public class riddleList extends Activity {
         SharedPreferences savedScore;
         savedScore = getSharedPreferences(Preferences, 0);
         SharedPreferences.Editor editor = savedScore.edit();
-        for(int i = 0; i<16; i++){
+        for(int i = 0; i<18; i++){
             String keyX = "nameKey" + i;
             editor.putBoolean(keyX, truthArray[i]);
         }
@@ -144,14 +135,13 @@ public class riddleList extends Activity {
 
     /**
      * Loads the score data, this should be used to check the score AND
-     * TODO: make the listview responsive to whether they have been solved
+     *
      */
     public void loadScoreData() {
         SharedPreferences savedScore = getSharedPreferences(Preferences, Context.MODE_PRIVATE);
-        for(int i = 0; i<16; i++){
+        for(int i = 0; i<18; i++){
             String keyX = "nameKey" + i;
             truthArray[i] = savedScore.getBoolean(keyX, false);
-            //riddleModel mriddleModel = new riddleModel(i, truthArray[i]);
         }
     }
 
@@ -195,7 +185,7 @@ public class riddleList extends Activity {
         }
         if (id == R.id.action_score) {
             int score = 0;
-            for (int i = 0; i < 15; i++) {
+            for (int i = 0; i < 18; i++) {
                 if (truthArray[i]) {
                     score++;
                 }
@@ -218,13 +208,4 @@ public class riddleList extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
     }
-
-    public boolean[] returnArray(){
-        return this.truthArray;
-    }
-    public String[] returnTitles(){
-        return this.riddleTitles;
-    }
-
-
 }

@@ -37,10 +37,15 @@ public class riddleAdapter extends ArrayAdapter<String> {
         v = vi.inflate(R.layout.list_row, null);
 
         TextView tt = (TextView) v.findViewById(R.id.rowTextView);
-        if(truthCheck[position]){
-            tt.setBackgroundResource(R.color.gold);
-            tt.setTextColor(Color.BLACK);
+        try{
+            if(truthCheck[position]){
+                tt.setBackgroundResource(R.color.gold);
+                tt.setTextColor(Color.BLACK);
+            }
+        }catch(ArrayIndexOutOfBoundsException e){
+
         }
+
 
         String p = getItem(position);
         if (p != null) {

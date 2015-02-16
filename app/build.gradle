@@ -8,8 +8,8 @@ android {
         applicationId "com.workingagenda.another.devinettes"
         minSdkVersion 11
         targetSdkVersion 20
-        versionCode 3
-        versionName "2.5"
+        versionCode 5
+        versionName "3.2"
     }
     buildTypes {
         release {
