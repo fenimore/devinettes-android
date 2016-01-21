@@ -6,7 +6,7 @@
     <string name="action_help">Help</string>
     <string name="action_score">Score</string>
 
-    <string name="help_text">Credits are accessed by long clicking a riddle title. The list-item will be highlighted in gold once it has been completed (also, long click a riddle text or title in order to check whether it has been solved).\n\nChecks, cash, and bitcoin will be accepted for tips, hints, or answers.\n\nFeedback is appreciated.\n\nThe source is hosted on github: https://github.com/exorableludos/devinettes-android.\n\nIt is prohibited to distribute these riddles commercially.\n\nContact the riddlers at: exorable.ludos@gmail.com</string>
+    <string name="help_text">Credits are accessed by long clicking a riddle title. The list-item will be highlighted in gold once it has been completed (also, long click a riddle text or title in order to check whether it has been solved).\n\nChecks, cash, and bitcoin will be accepted for tips, hints, or answers.\n\nFeedback is appreciated.\n\nThe source is hosted on github: https://github.com/polypmer/devinettes-android.\n\nThe riddles are licenced under Creative Commons BY-SA-NC.\n\nContact the riddlers at: fenimore.love@workingagenda.com</string>
 
     <string-array name="riddleTitles">
         <item>The sphinx</item>
