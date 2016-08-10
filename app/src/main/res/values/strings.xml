@@ -9,7 +9,7 @@
     <string name="help_text">Credits are accessed by long clicking a riddle title. The list-item will be highlighted in gold once it has been completed (also, long click a riddle text or title in order to check whether it has been solved).\n\nChecks, cash, and bitcoin will be accepted for tips, hints, or answers.\n\nFeedback is appreciated.\n\nThe source is hosted on github: https://github.com/polypmer/devinettes-android.\n\nThe riddles are licenced under Creative Commons BY-SA-NC.\n\nContact the riddlers at: fenimore.love@workingagenda.com</string>
 
     <string-array name="riddleTitles">
-        <item>The sphinx</item>
+        <item>The Stomach</item>
         <item>Name this pest</item>
         <item>The cobalt current</item>
         <item>Name your heroine after me</item>
@@ -53,7 +53,7 @@
 
     </string-array>
     <string-array name="answers">
-        <item>d787f56b080945c1ec0b3343cbf962ca427bb8ef</item>
+        <item>1da8402449899ec1ba9c34c095dbb79d0585dcd7</item>
         <item>0efec51fd7cf517793321ec68fd852811537b69c</item>
         <item>9c795e6a9969fe9d25768b50907bfd7b167c85b8</item>
         <item>0f91787c8088296ea1439e159e4845b7b4cb5df5</item>
@@ -78,7 +78,7 @@
     <string-array name="answersTwo">
     </string-array>
     <string-array name="riddles">
-        <item>It walks on four legs in the morning\nTwo legs in the afternoon\nAnd three legs at night.\nWhat is it?</item>
+        <item>I can eat anything, but if I drink water I die.</item>
         <item>See if you can name this pest:\nA trickster of the ancient lore,\nreminds me of a writing desk,\once it told me: \"never more\"</item>
         <item>I am the cobalt current\nSafe from view. But puncture me\nAnd a rubescent torrent\nWill spill all over you.</item>
         <item>Name your heroine after me\nOr count your chances, set her free.\nOr make a chain to bind her near\nMy life is short, your love is dear.</item>
