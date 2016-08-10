@@ -15,7 +15,17 @@ public class RiddleCollection {
         // So that I can change around order no prob
         int i = 0;
 
-        Riddle r = new Riddle("Name this pest", "See if you can name this pest:\n" +
+        Riddle r = new Riddle("The Sphinx\'s Riddle",
+                "What walks on four legs in the morning,\n" +
+                        "then two legs in the afternoon,\n" +
+                        "and three in the evening?",
+                "Sophocles",
+                "d787f56b080945c1ec0b3343cbf962ca427bb8ef");
+        r.setId(i);
+        i++;
+        riddles.add(r);
+
+        r = new Riddle("Name this pest", "See if you can name this pest:\n" +
                 "A trickster of the ancient lore,\n" +
                 "reminds me of a writing desk,\n"+
                 "once it told me: never more\n",
@@ -68,15 +78,23 @@ public class RiddleCollection {
         r = new Riddle("Without This Common Currency",
                 "Without this common currency,\nCries are quieted, food is bland,\nAll light will lose transparency\nAnd numbness stuns your hand.",
                 "rufus 2013",
-                "e9a38c050834263fce81375d8e3dcdbeec80b082");
+                "abfde2a7fdf79a571f95f0da0de9762b6a324472");
         r.setId(i);
         i++;
         riddles.add(r);
 
         r = new Riddle("My Warmth Connects",
+                "My warmth connects from far to wide,\nNevertheless, I too divide.\nI am the greatest of my kind;\nMy value, zero, will never rise.",
+                "ludos 2013",
+                "06ea4987e7621b4ff0995777aadbdd01c2fe5262");
+        r.setId(i);
+        i++;
+        riddles.add(r);
+
+        r = new Riddle("When There Is One",
                 "When there is one, it is stood up \nWhen there are two, they\'ve both been true \nWhen there are seven, it is creation \nWhen they\'ve past, their record lasts.",
                 "ludos 2013",
-                "c09a2565eb3e551d0b33b3f5111b7fd0b90263f4");
+                "e927d0677c77241b707442314346326278051dd6");
         r.setId(i);
         i++;
         riddles.add(r);
@@ -84,12 +102,66 @@ public class RiddleCollection {
         r = new Riddle("What Coat Or Crust",
                 "What coat or crust is always worn\nIn winter when my hair has shed\nAnd blossom season, when I\'m warm\nAnd hair\'s again atop my head.",
                 "rufus &amp; ludos 2010",
-                "06ea4987e7621b4ff0995777aadbdd01c2fe5262");
+                "cc86fbef6659b4c929f80b139294e11a5bd44269");
         r.setId(i);
         i++;
         riddles.add(r);
 
+        r = new Riddle("Where, Close At Hand",
+                "My dearest vexxed, where, close at hand,\nDo suited men mean royalty,\nWhere one defector from the band\nMay forfeit all their quality?",
+                "rufus &amp; ludos 2010",
+                "c8d3756e45b644ce8b817869739736d39c31e30e");
+        r.setId(i);
+        i++;
+        riddles.add(r);
 
+        r = new Riddle("What Ancient War",
+                "What ancient war, played out in duels,\nThough set aside, is never won,\nDespite the fall of kings to fools\nAnd tragically neglected pun?",
+                "rufus &amp; ludos 2010",
+                "8fe63c015a9b530b576c408f8e25c043967ef67b");
+        r.setId(i);
+        i++;
+        riddles.add(r);
+
+        r = new Riddle("Found In Heaps",
+                "Found in heaps of equine cuisine.\nYou poke my eye and guide me well,\nLed beneath, lest my mark be seen.\nI wound! Yet heal! None need tell.",
+                "mobia &amp; ludos 2012",
+                "b65840c9c035ddad29c5a0e3f64428d4d5271c16");
+        r.setId(i);
+        i++;
+        riddles.add(r);
+
+        r = new Riddle("Without You I am Incomplete 1",
+                "Without you I am incomplete\nYou, the earth´s most tasteful treasure,\nI, the opposite of sweet\nIn harmony we come together.",
+                "mobia &amp; ludos 2012",
+                "b295d117135a9763da282e7dae73a5ca7d3e5b11");
+        r.setId(i);
+        i++;
+        riddles.add(r);
+
+        r = new Riddle("Without You I am Incomplete 2",
+                "Without you I am incomplete\nYou dry your tears and come ashore\nYou white, I black, at last we meet\nBetter to wed than to be pure.",
+                "mobia &amp; ludos 2012",
+                "64356bcfae350c970263c1ce575185b289f7b836");
+        r.setId(i);
+        i++;
+        riddles.add(r);
+
+        r = new Riddle("What\'s The Answer",
+                "What\'s the secret to this question\nWhich seems to mean to little?\nYou think you know but think again,\nThe answer is a riddle.",
+                "rufus 2010",
+                "ecefe3a4d0a5737a74471c289c787880772a293a");
+        r.setId(i);
+        i++;
+        riddles.add(r);
+
+        r = new Riddle("This: Brought By Man",
+                "This: brought by man into the world,\nThing unthinkable, yet present:\nNor God, nor Love, nor Mind unfurled,\nThe trick? The answer isn\'t.",
+                "rufus 2010",
+                "0feca720e2c29dafb2c900713ba560e03b758711");
+        r.setId(i);
+        i++;
+        riddles.add(r);
         /*
         r = new Riddle("",
                 "",
@@ -97,7 +169,9 @@ public class RiddleCollection {
                 "");
         r.setId(i);
         i++;
-        riddles.add(r);*/
+        riddles.add(r);
+
+        */
 
 
         return riddles;
