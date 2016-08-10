@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     package="com.workingagenda.devinettes">
+=======
+    package="com.workingagenda.another.devinettes"
+    android:versionCode="6"
+    android:versionName="3.3" >
+>>>>>>> efd510dced33be1b47c7f24793034ef06f9fa17e
 
     <application
         android:allowBackup="true"
