@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +24,8 @@ public class RiddlePanel extends AppCompatActivity {
     private TextView tv;
     private Button btn;
     private EditText et;
+    private Riddle r;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +36,7 @@ public class RiddlePanel extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent i = getIntent();
-        Riddle r = i.getParcelableExtra("riddle");
+        r = i.getParcelableExtra("riddle");
 
         tv = (TextView) findViewById(R.id.riddle);
         et = (EditText) findViewById(R.id.guess);
@@ -45,10 +48,10 @@ public class RiddlePanel extends AppCompatActivity {
                 String guess = et.getText().toString().toLowerCase();
                 guess = createHash(guess);
                 if(guess.equals(r.getAnswer())){
-                    Toast.makeText(RiddlePanel.this, "", Toast.LENGTH_SHORT).show();
-                    Toast reply = Toast.makeText(getApplicationContext(), "correct", Toast.LENGTH_SHORT);
-                    reply.show();
+                    Toast.makeText(RiddlePanel.this, "Correct!", Toast.LENGTH_SHORT).show();
                     et.setText("");
+                } else {
+                    Toast.makeText(RiddlePanel.this, "Wrong!", Toast.LENGTH_SHORT).show();
                 }
             }
 
