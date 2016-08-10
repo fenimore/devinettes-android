@@ -1,11 +1,14 @@
 package com.workingagenda.devinettes;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 
 /**
  * Created by fen on 8/10/16.
  */
-public class Riddle {
+public class Riddle implements Parcelable {
 
     private String title;
     private String riddle;
@@ -65,6 +68,36 @@ public class Riddle {
     }
 
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(title);
+        parcel.writeString(riddle);
+        parcel.writeString(answer);
+        parcel.writeString(author);
+    }
+
+     public static final Parcelable.Creator<Riddle> CREATOR
+             = new Parcelable.Creator<Riddle>() {
+         public Riddle createFromParcel(Parcel in) {
+             return new Riddle(in);
+         }
+
+         public Riddle[] newArray(int size) {
+             return new Riddle[size];
+         }
+     };
+
+    private Riddle(Parcel in) {
+        title = in.readString();
+        riddle = in.readString();
+        answer = in.readString();
+        author = in.readString();
+    }
 
 
 }

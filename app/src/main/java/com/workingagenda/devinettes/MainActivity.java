@@ -1,5 +1,6 @@
 package com.workingagenda.devinettes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -31,6 +34,15 @@ public class MainActivity extends AppCompatActivity {
         RiddleAdapter adapter = new RiddleAdapter(this, R.layout.row_riddle, riddles);
         mListView.setAdapter(adapter);
 
+        mListView.setOnItemClickListener(new OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
+                Intent intent = new Intent(getBaseContext(), RiddlePanel.class);
+                intent.putExtra("riddle", riddles.get(pos));
+                startActivityForResult(intent, 0);
+                finish();
+            }
+        });
     }
 
     @Override
@@ -55,9 +67,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void loadRiddle(Riddle riddle) {
-
-    }
 
     public ArrayList<Riddle> GetRiddles() {
         ArrayList<Riddle> riddles = new ArrayList<>(20);

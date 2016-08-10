@@ -18,6 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+            <activity
+                android:name=".RiddlePanel"
+                android:label="@string/riddle_panel"
+                android:icon="@mipmap/ic_launcher_3"
+                android:parentActivityName=".MainActivity">
+                <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.workingagenda.devinettes.MainActivity" />
+            </activity>
     </application>
-
 </manifest>

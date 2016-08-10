@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Devinettes</string>
+    <string name="riddle_panel">My Dearest Vexxed...</string>
     <string name="action_settings">Settings</string>
 </resources>

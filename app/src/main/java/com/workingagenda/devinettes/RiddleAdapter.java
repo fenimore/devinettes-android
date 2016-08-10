@@ -14,9 +14,6 @@ import java.util.ArrayList;
  */
 public class RiddleAdapter extends ArrayAdapter<Riddle> {
 
-    public RiddleAdapter(Context context, int resource) {
-        super(context, resource);
-    }
 
     public RiddleAdapter(Context context, int resource, ArrayList<Riddle> items) {
         super(context, resource, items);
