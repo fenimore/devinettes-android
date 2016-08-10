@@ -7,15 +7,6 @@ import java.util.ArrayList;
  */
 public class RiddleCollection {
 
-    private ArrayList<Riddle> riddles;
-
-    public ArrayList<Riddle> getRiddles() {
-        return riddles;
-    }
-
-    public void setRiddles(ArrayList<Riddle> riddles) {
-        this.riddles = riddles;
-    }
 
     public static ArrayList<Riddle> Collect() {
         ArrayList<Riddle> riddles = new ArrayList<>(20);
