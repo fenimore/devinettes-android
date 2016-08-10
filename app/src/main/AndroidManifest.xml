@@ -22,7 +22,8 @@
                 android:name=".RiddlePanel"
                 android:label="@string/riddle_panel"
                 android:icon="@mipmap/ic_launcher_3"
-                android:parentActivityName=".MainActivity">
+                android:parentActivityName=".MainActivity"
+                android:theme="@style/AppTheme.NoActionBar">
                 <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="com.workingagenda.devinettes.MainActivity" />
