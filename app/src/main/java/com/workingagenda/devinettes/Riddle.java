@@ -15,6 +15,7 @@ public class Riddle implements Parcelable {
     private String answer;
     private boolean correct;
     private String author;
+    private int id;
 
     public Riddle(String title, String riddle, String author, String answer) {
         this.title = title;
@@ -34,6 +35,13 @@ public class Riddle implements Parcelable {
     }
 
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getRiddle() {
         return riddle;
     }

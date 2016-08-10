@@ -32,9 +32,10 @@ public class RiddlePanel extends AppCompatActivity {
         setContentView(R.layout.activity_riddle);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        //getSupportActionBar().setHomeAsUpIndicator(android.R.drawable.ho);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setHomeAsUpIndicator(android.R.drawable.ho);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent i = getIntent();
         r = i.getParcelableExtra("riddle");
@@ -59,6 +60,9 @@ public class RiddlePanel extends AppCompatActivity {
         });
 
     }
+
+    // Answers are stored in SHA 1 hash
+    // Ha ha source snoopers...
     private String createHash(String g) {
         /*
         This method is from
@@ -95,8 +99,5 @@ public class RiddlePanel extends AppCompatActivity {
         return null;
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
+
 }

@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        riddles = GetRiddles();
+        riddles = RiddleCollection.Collect();
 
         mListView = (ListView) findViewById(android.R.id.list);
         RiddleAdapter adapter = new RiddleAdapter(this, R.layout.row_riddle, riddles);
@@ -65,20 +65,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-
-    public ArrayList<Riddle> GetRiddles() {
-        ArrayList<Riddle> riddles = new ArrayList<>(20);
-        Riddle r = new Riddle("Name this pest", "See if you can name this pest:\n" +
-                "A trickster of the ancient lore,\n" +
-                "reminds me of a writing desk,\n"+
-                "once it told me: never more\n",
-                "mobia &amp; ludos 2015",
-                "0efec51fd7cf517793321ec68fd852811537b69c");
-
-        riddles.add(r);
-
-        return riddles;
     }
 }
