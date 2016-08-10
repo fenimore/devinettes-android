@@ -1,72 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:scrollbars="vertical"
-    android:background="#242424"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_width="fill_parent">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#242424"
-    android:icon="@drawable/devinettes_icon_black"
-    android:label="my dearest vexxed," >
+    android:fitsSystemWindows="true"
+    tools:context="com.workingagenda.another.devinettes.riddlePanel">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main_view" />
+
+</android.support.design.widget.CoordinatorLayout>
 
 
-    <TextView
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="10sp"
-        android:typeface="sans"
-        android:textColor="#e4e4e4"
-        android:textSize="17.5sp"
-        android:text="Riddle me this"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
 
-        android:id="@+id/words" />
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-    <EditText
-        android:id="@+id/userInput"
-        android:layout_marginLeft="30dp"
-        android:layout_weight="1"
-        android:typeface="sans"
-        android:textColor="#d6d6d6"
-        android:layout_marginTop="30dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="enter guess"
-        android:textAllCaps="false"
-        android:phoneNumber="false" />
-    <Button
-        android:id="@+id/btnGuess"
-        android:text=">>"
-        android:textStyle="bold"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:typeface="sans"
-        android:padding="10dp"
-        android:layout_marginTop="30dp"
-        android:background="#242424"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:shadowColor="@color/abc_search_url_text_normal"
-        android:textColor="#ffbb33"
-        android:clickable="false"/>
-    </LinearLayout>
-    <ImageButton
-        android:id="@+id/btnEnlarge"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:src="@drawable/magniglass"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:padding="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center"
-        android:background="#242424"/>
 
-</LinearLayout>
-    </ScrollView>
+

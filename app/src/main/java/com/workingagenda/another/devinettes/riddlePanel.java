@@ -26,6 +26,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -44,18 +46,9 @@ import java.security.NoSuchAlgorithmException;
  * TODO: make the magnification toggle
  * list stuff
  */
-public class riddlePanel extends Activity {
+public class riddlePanel extends AppCompatActivity {
 
-    /**
-     * Outside of the oncreate method there are
-     * simply the methods for: CheckAnswer and Load/Save Score
-     *
-     * The oncreate fills the riddle TextView and then
-     * populates, likewise, the answer field
-     *
-     * TODO: Button for submit? Scroll somehow?
-     *
-     */
+
 
     private static final int ACTIVITY_LIST=0;
 
@@ -83,6 +76,10 @@ public class riddlePanel extends Activity {
 
         setContentView(R.layout.riddle_panel);
         //getActionBar().setDisplayHomeAsUpEnabled(true);
+        // ActionBar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher_3);
 
         words = (TextView) findViewById(R.id.words);
         btnGuess = (Button) findViewById(R.id.btnGuess);
