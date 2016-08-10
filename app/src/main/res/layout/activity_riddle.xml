@@ -22,11 +22,11 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
         android:background="@color/colorPrimaryDark">
 
 
         <TextView
-            android:layout_marginTop="50dp"
             android:layout_marginLeft="10sp"
             android:typeface="sans"
             android:textColor="@color/grey"
@@ -34,16 +34,15 @@
             android:text="Riddle me this"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-
             android:id="@+id/riddle" />
 
         <EditText
             android:id="@+id/guess"
             android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:layout_weight="1"
             android:typeface="sans"
             android:textColor="@color/grey"
-            android:layout_marginTop="30dp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="enter guess"
@@ -52,9 +51,8 @@
             android:id="@+id/btnGuess"
             android:text=">>"
             android:textStyle="bold"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:typeface="sans"
             android:padding="10dp"
             android:layout_marginTop="30dp"
