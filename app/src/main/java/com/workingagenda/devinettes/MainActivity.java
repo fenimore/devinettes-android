@@ -8,8 +8,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    private ListView mListView;
+    private ArrayList<Riddle> riddles;
+    private final static String Preferences = "MyPrefs";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +25,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        riddles = GetRiddles();
 
+        mListView = (ListView) findViewById(android.R.id.list);
+        RiddleAdapter adapter = new RiddleAdapter(this, R.layout.row_riddle, riddles);
+        mListView.setAdapter(adapter);
 
     }
 
@@ -41,5 +53,23 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void loadRiddle(Riddle riddle) {
+
+    }
+
+    public ArrayList<Riddle> GetRiddles() {
+        ArrayList<Riddle> riddles = new ArrayList<>(20);
+        Riddle r = new Riddle("Name this pest", "See if you can name this pest:\n" +
+                "A trickster of the ancient lore,\n" +
+                "reminds me of a writing desk,\n"+
+                "once it told me: never more",
+                "mobia &amp; ludos 2015",
+                "1da8402449899ec1ba9c34c095dbb79d0585dcd7");
+
+        riddles.add(r);
+
+        return riddles;
     }
 }
