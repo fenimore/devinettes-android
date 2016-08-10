@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         Riddle r = new Riddle("Name this pest", "See if you can name this pest:\n" +
                 "A trickster of the ancient lore,\n" +
                 "reminds me of a writing desk,\n"+
-                "once it told me: never more",
+                "once it told me: never more\n",
                 "mobia &amp; ludos 2015",
                 "0efec51fd7cf517793321ec68fd852811537b69c");
 

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    android:versionName="1.0.0"
     package="com.workingagenda.devinettes">
 
     <application
@@ -18,14 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-            <activity
-                android:name=".RiddlePanel"
-                android:label="@string/riddle_panel"
-                android:parentActivityName=".MainActivity"
-                android:theme="@style/AppTheme.NoActionBar">
-                <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.workingagenda.devinettes.MainActivity" />
-            </activity>
+        <activity
+            android:name=".RiddlePanel"
+            android:label="@string/riddle_panel"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 </manifest>

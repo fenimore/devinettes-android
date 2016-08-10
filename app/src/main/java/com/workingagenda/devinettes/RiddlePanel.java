@@ -33,6 +33,7 @@ public class RiddlePanel extends AppCompatActivity {
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setHomeAsUpIndicator(android.R.drawable.ho);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent i = getIntent();
