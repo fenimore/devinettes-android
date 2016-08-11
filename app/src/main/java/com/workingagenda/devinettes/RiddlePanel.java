@@ -37,8 +37,6 @@ public class RiddlePanel extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        //getSupportActionBar().setHomeAsUpIndicator(android.R.drawable.ho);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent i = getIntent();
         r = i.getParcelableExtra("riddle");
@@ -66,10 +64,9 @@ public class RiddlePanel extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_panel, menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

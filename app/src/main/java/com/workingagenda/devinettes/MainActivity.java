@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getBaseContext(), RiddlePanel.class);
                 intent.putExtra("riddle", riddles.get(pos));
                 startActivityForResult(intent, 0);
-                finish();
+                //finish(); // <- This fucking thorn in my fucking side wtf
             }
         });
     }
