@@ -1,6 +1,7 @@
 package com.workingagenda.devinettes;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,14 @@ public class RiddleAdapter extends ArrayAdapter<Riddle> {
 
         TextView tv = (TextView) convertView.findViewById(R.id.riddle_title);
         tv.setText(r.getTitle());
+        try {
+            if(r.isCorrect()) {
+                tv.setBackgroundResource(R.color.gold);
+                tv.setTextColor(Color.BLACK);
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            // Do nothing
+        }
         return convertView;
     }
 }

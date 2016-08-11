@@ -88,6 +88,7 @@ public class Riddle implements Parcelable {
         parcel.writeString(riddle);
         parcel.writeString(answer);
         parcel.writeString(author);
+        parcel.writeInt(id);
     }
 
      public static final Parcelable.Creator<Riddle> CREATOR
@@ -106,6 +107,7 @@ public class Riddle implements Parcelable {
         riddle = in.readString();
         answer = in.readString();
         author = in.readString();
+        id = in.readInt();
     }
 
 

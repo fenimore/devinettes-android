@@ -1,6 +1,8 @@
 package com.workingagenda.devinettes;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NavUtils;
@@ -53,6 +55,15 @@ public class RiddlePanel extends AppCompatActivity {
                 if(guess.equals(r.getAnswer())){
                     Toast.makeText(RiddlePanel.this, "Correct!", Toast.LENGTH_SHORT).show();
                     et.setText("");
+                    // Save the Score
+                    SharedPreferences score;
+                    score = getSharedPreferences("score", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = score.edit();
+                    String key = Integer.toString(r.getId()+1); // Key is ID
+                    editor.putBoolean(key, true);
+                    editor.commit();
+                    Log.d(key, String.valueOf(score.getBoolean(Integer.toString(r.getId()), false)));
+
                 } else {
                     Toast.makeText(RiddlePanel.this, "Wrong!", Toast.LENGTH_SHORT).show();
                 }
@@ -72,8 +83,9 @@ public class RiddlePanel extends AppCompatActivity {
         switch (item.getItemId()) {
             // Respond to the action bar's Up/Home button
             case android.R.id.home:
+                //startActivityForResult(new Intent(getBaseContext(), MainActivity.class), 0);
                 //finish();
-                Log.d("Does this do anything", "NOOOOO");
+                //NavUtils.shouldUpRecreateTask(this, new Intent(this, MainActivity.class));
                 NavUtils.navigateUpFromSameTask(this);
                 return true;
         }
