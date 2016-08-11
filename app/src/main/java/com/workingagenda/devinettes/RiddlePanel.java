@@ -42,6 +42,7 @@ public class RiddlePanel extends AppCompatActivity {
 
         Intent i = getIntent();
         r = i.getParcelableExtra("riddle");
+        Log.d("THE ID", Integer.toString(r.getId()));
 
         tv = (TextView) findViewById(R.id.riddle);
         et = (EditText) findViewById(R.id.guess);
@@ -59,7 +60,7 @@ public class RiddlePanel extends AppCompatActivity {
                     SharedPreferences score;
                     score = getSharedPreferences("score", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = score.edit();
-                    String key = Integer.toString(r.getId()+1); // Key is ID
+                    String key = Integer.toString(r.getId()); // Key is ID
                     editor.putBoolean(key, true);
                     editor.commit();
                     Log.d(key, String.valueOf(score.getBoolean(Integer.toString(r.getId()), false)));

@@ -24,9 +24,9 @@ public class RiddleCollection {
                 "Sophocles",
                 "d787f56b080945c1ec0b3343cbf962ca427bb8ef");
         r.setId(i);
-        i = i++;
+        i++;
         riddles.add(r);
-        Log.d("ID?", Integer.toString(i));
+
         r = new Riddle("Name This Pest", "See if you can name this pest:\n" +
                 "A trickster of the ancient lore,\n" +
                 "reminds me of a writing desk,\n"+
@@ -45,7 +45,6 @@ public class RiddleCollection {
                 "9c795e6a9969fe9d25768b50907bfd7b167c85b8");
         r.setId(i);
         i++;
-        Log.d("ID?", Integer.toString(i));
         riddles.add(r);
 
         r = new Riddle("Name Your Heroine After Me", "Name your heroine after me\nOr count your chances, set her free.\nOr make a chain to bind her near\nMy life is short, your love is dear.",
