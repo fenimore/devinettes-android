@@ -12,6 +12,7 @@ public class Riddle implements Parcelable {
 
     private String title;
     private String riddle;
+    // TODO: change to List<>
     private String answer;
     private boolean correct;
     private String author;
