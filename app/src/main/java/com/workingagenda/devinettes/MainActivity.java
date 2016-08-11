@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView mListView;
     private ArrayList<Riddle> riddles;
+    private RiddleAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         riddles = RiddleCollection.Collect();
         loadScoreData();
         mListView = (ListView) findViewById(android.R.id.list);
-        RiddleAdapter adapter = new RiddleAdapter(this, R.layout.row_riddle, riddles);
+        adapter = new RiddleAdapter(this, R.layout.row_riddle, riddles);
         mListView.setAdapter(adapter);
 
         mListView.setOnItemClickListener(new OnItemClickListener(){
@@ -67,6 +68,15 @@ public class MainActivity extends AppCompatActivity {
         }else if (id == R.id.action_about) {
             return true;
         } else if (id == R.id.action_reset) {
+            SharedPreferences score = getSharedPreferences("score", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = score.edit();
+            for(int i = 0; i<riddles.size(); i++){
+                String key = Integer.toString(i);
+                editor.putBoolean(key, false);
+            }
+            editor.commit();
+            adapter.notifyDataSetChanged(); // TODO: Doesn't work
+            // TODO: TOAST and refresh page?
             return true;
         }
         return super.onOptionsItemSelected(item);
