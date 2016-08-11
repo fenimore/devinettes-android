@@ -73,10 +73,10 @@ public class MainActivity extends AppCompatActivity {
             for(int i = 0; i<riddles.size(); i++){
                 String key = Integer.toString(i);
                 editor.putBoolean(key, false);
+                riddles.get(i).setCorrect(false);
             }
             editor.commit();
-            adapter.notifyDataSetChanged(); // TODO: Doesn't work
-            // TODO: TOAST and refresh page?
+            adapter.notifyDataSetChanged();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -87,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
         score = getSharedPreferences("score", Context.MODE_PRIVATE);
         for (int i=0; i<riddles.size(); i++) {
             riddles.get(i).setCorrect(score.getBoolean(Integer.toString(i), false));
-            Log.d(Integer.toString(riddles.get(i).getId()), String.valueOf(riddles.get(i).isCorrect()) );
         }
 
     }
