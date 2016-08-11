@@ -47,6 +47,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="enter guess"
+            android:textColorHint="@color/grey"
             android:textAllCaps="false"/>
         <Button
             android:id="@+id/btnGuess"
