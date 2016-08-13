@@ -22,6 +22,7 @@ public class Riddle implements Parcelable {
         this.title = title;
         this.riddle = riddle;
         this.answer = answer;
+        this.author = author;
         this.correct = false;
     }
 

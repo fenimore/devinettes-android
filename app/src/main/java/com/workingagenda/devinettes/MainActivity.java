@@ -47,6 +47,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast t = Toast.makeText(getBaseContext(), "By: " + riddles.get(i).getAuthor(), Toast.LENGTH_LONG);
+                t.show();
+                return false;
+            }
+        });
+
     }
 
     @Override
