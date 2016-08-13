@@ -5,4 +5,5 @@
     <string name="action_score">Score</string>
     <string name="action_about">About</string>
     <string name="action_reset">Reset</string>
+    <string name="about_string">This is a collection of Riddles written by an unorganized team of Riddlers at Sphinx Industry. This application is open source, found with the button on the task bar above. If one is interested in hints and/or answers to these riddles, we Riddles accept donations in the form of check, cash, or bitcoin. Please email the riddlers by clicking the button above.</string>
 </resources>

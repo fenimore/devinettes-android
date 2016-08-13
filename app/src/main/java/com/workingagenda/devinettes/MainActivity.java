@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
             return true;
         }else if (id == R.id.action_about) {
+            Intent i = new Intent(this, AboutActivity.class);
+            startActivity(i);
             return true;
         } else if (id == R.id.action_reset) {
             SharedPreferences score = getSharedPreferences("score", Context.MODE_PRIVATE);
