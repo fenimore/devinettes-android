@@ -37,33 +37,36 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
             android:id="@+id/riddle" />
-
-        <EditText
-            android:id="@+id/guess"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:typeface="sans"
-            android:textColor="@color/grey"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="enter guess"
-            android:textColorHint="@color/grey"
-            android:textAllCaps="false"/>
-        <Button
-            android:id="@+id/btnGuess"
-            android:text=">>"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:typeface="sans"
-            android:padding="10dp"
-            android:layout_marginTop="30dp"
-            android:background="@color/gold"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
-            android:shadowColor="@color/abc_search_url_text_normal"
-            android:textColor="@color/colorPrimary"
-            android:clickable="false"/>
-
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/guess"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:typeface="sans"
+                android:textColor="@color/grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="enter guess"
+                android:textColorHint="@color/grey"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/btnGuess"
+                android:text=">>"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:typeface="sans"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/gold"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:shadowColor="@color/abc_search_url_text_normal"
+                android:textColor="@color/colorPrimary"
+                android:clickable="false"/>
+        </LinearLayout>
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
