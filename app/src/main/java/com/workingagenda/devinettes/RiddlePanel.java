@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +28,7 @@ import java.security.NoSuchAlgorithmException;
 public class RiddlePanel extends AppCompatActivity {
 
     private TextView tv;
-    private Button btn;
+    private ImageButton btn;
     private EditText et;
     private Riddle r;
 
@@ -47,7 +48,7 @@ public class RiddlePanel extends AppCompatActivity {
         tv = (TextView) findViewById(R.id.riddle);
         et = (EditText) findViewById(R.id.guess);
         tv.setText(r.getRiddle());
-        btn = (Button) findViewById(R.id.btnGuess);
+        btn = (ImageButton) findViewById(R.id.btnGuess);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

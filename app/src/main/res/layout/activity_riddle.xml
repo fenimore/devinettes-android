@@ -43,6 +43,7 @@
             android:orientation="horizontal">
             <EditText
                 android:id="@+id/guess"
+                android:layout_weight="1"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:typeface="sans"
@@ -52,15 +53,13 @@
                 android:hint="enter guess"
                 android:textColorHint="@color/grey"
                 android:textAllCaps="false"/>
-            <Button
+            <ImageButton
+                android:layout_weight="1"
                 android:id="@+id/btnGuess"
-                android:text=">>"
-                android:textStyle="bold"
+                android:src="@drawable/ic_input_white_24dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:typeface="sans"
                 android:padding="10dp"
-                android:layout_marginTop="30dp"
                 android:background="@color/gold"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"
