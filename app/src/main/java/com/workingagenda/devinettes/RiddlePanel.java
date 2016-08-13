@@ -27,6 +27,7 @@ import java.security.NoSuchAlgorithmException;
 public class RiddlePanel extends AppCompatActivity {
 
     private TextView tv;
+    private TextView av;
     private Button btn;
     private EditText et;
     private Riddle r;
@@ -45,8 +46,10 @@ public class RiddlePanel extends AppCompatActivity {
         Log.d("THE ID", Integer.toString(r.getId()));
 
         tv = (TextView) findViewById(R.id.riddle);
+        av = (TextView) findViewById(R.id.author_text);
         et = (EditText) findViewById(R.id.guess);
         tv.setText(r.getRiddle());
+        av.setText(r.getAuthor());
         btn = (Button) findViewById(R.id.btnGuess);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

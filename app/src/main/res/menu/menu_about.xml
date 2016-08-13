@@ -5,11 +5,13 @@
         android:id="@+id/action_source"
         app:showAsAction="always"
         android:title="Source"
+        android:icon="@drawable/ic_code_black_24dp"
         android:orderInCategory="100"/>
     <item
         android:id="@+id/action_mail"
         app:showAsAction="always"
         android:title="Mail"
+        android:icon="@drawable/ic_email_black_24dp"
         android:orderInCategory="200"
         />
 </menu>

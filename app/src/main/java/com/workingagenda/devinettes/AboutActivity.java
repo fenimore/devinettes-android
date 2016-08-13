@@ -54,8 +54,6 @@ public class AboutActivity extends AppCompatActivity {
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 }
-
-
                 startActivity(intent);
                 return true;
         }
