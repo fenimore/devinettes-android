@@ -105,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
         if (count == 1) {
             return "1 Riddle Solved!";
         }
+        if (count == riddles.size()) {
+            return "Congratulations! All the Riddles have been solved!";
+        }
         s = Integer.toString(count) + " Riddles Solved!";
         return s;
     }
