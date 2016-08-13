@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -31,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         riddles = RiddleCollection.Collect();
-        loadScoreData();
+        loadScoreData(); // Take sharedpreferences, and update collection
+
         mListView = (ListView) findViewById(android.R.id.list);
         adapter = new RiddleAdapter(this, R.layout.row_riddle, riddles);
         mListView.setAdapter(adapter);
@@ -42,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getBaseContext(), RiddlePanel.class);
                 intent.putExtra("riddle", riddles.get(pos));
                 startActivityForResult(intent, 0);
-                //finish();
             }
         });
 
@@ -78,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
             editor.commit();
             adapter.notifyDataSetChanged();
             return true;
+        } else if (id == R.id.action_score){
+            Toast toast = Toast.makeText(this, calcScore(), Toast.LENGTH_LONG);
+            toast.show();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -89,5 +93,20 @@ public class MainActivity extends AppCompatActivity {
             riddles.get(i).setCorrect(score.getBoolean(Integer.toString(i), false));
         }
 
+    }
+
+    private String calcScore() {
+        String s;
+        int count = 0;
+        for (int i= 0; i<riddles.size(); i++) {
+            if (riddles.get(i).isCorrect()) {
+                count++;
+            }
+        }
+        if (count == 1) {
+            s = "1 Riddle Solved!";
+        }
+        s = Integer.toString(count) + " Riddles Solved!";
+        return s;
     }
 }
