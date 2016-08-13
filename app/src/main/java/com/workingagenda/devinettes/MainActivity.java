@@ -65,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_score) {
+            Toast toast = Toast.makeText(this, calcScore(), Toast.LENGTH_LONG);
+            toast.show();
             return true;
         }else if (id == R.id.action_about) {
             return true;
@@ -79,9 +81,6 @@ public class MainActivity extends AppCompatActivity {
             editor.commit();
             adapter.notifyDataSetChanged();
             return true;
-        } else if (id == R.id.action_score){
-            Toast toast = Toast.makeText(this, calcScore(), Toast.LENGTH_LONG);
-            toast.show();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -104,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if (count == 1) {
-            s = "1 Riddle Solved!";
+            return "1 Riddle Solved!";
         }
         s = Integer.toString(count) + " Riddles Solved!";
         return s;
