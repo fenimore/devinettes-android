@@ -31,7 +31,7 @@ public class RiddleCollection {
                 "A trickster of the ancient lore,\n" +
                 "reminds me of a writing desk,\n"+
                 "once it told me: never more\n",
-                "mobia &amp; ludos 2015",
+                "mobia & ludos 2015",
                 "0efec51fd7cf517793321ec68fd852811537b69c");
         r.setId(i);
         i++;
@@ -41,7 +41,7 @@ public class RiddleCollection {
         r = new Riddle("The Cobalt Current", "I am the cobalt current\n" +
                 "Safe from view. But puncture me\n" +
                 "And a rubescent torrent\nWill spill all over you.",
-                "mobia &amp; ludos 2015",
+                "mobia & ludos 2015",
                 "9c795e6a9969fe9d25768b50907bfd7b167c85b8");
         r.setId(i);
         i++;
@@ -104,7 +104,7 @@ public class RiddleCollection {
 
         r = new Riddle("What Coat Or Crust",
                 "What coat or crust is always worn\nIn winter when my hair has shed\nAnd blossom season, when I\'m warm\nAnd hair\'s again atop my head.",
-                "rufus &amp; ludos 2010",
+                "rufus & ludos 2010",
                 "cc86fbef6659b4c929f80b139294e11a5bd44269");
         r.setId(i);
         i++;
@@ -112,7 +112,7 @@ public class RiddleCollection {
 
         r = new Riddle("Where, Close At Hand",
                 "My dearest vexxed, where, close at hand,\nDo suited men mean royalty,\nWhere one defector from the band\nMay forfeit all their quality?",
-                "rufus &amp; ludos 2010",
+                "rufus & ludos 2010",
                 "c8d3756e45b644ce8b817869739736d39c31e30e");
         r.setId(i);
         i++;
@@ -120,7 +120,7 @@ public class RiddleCollection {
 
         r = new Riddle("What Ancient War",
                 "What ancient war, played out in duels,\nThough set aside, is never won,\nDespite the fall of kings to fools\nAnd tragically neglected pun?",
-                "rufus &amp; ludos 2010",
+                "rufus & ludos 2010",
                 "8fe63c015a9b530b576c408f8e25c043967ef67b");
         r.setId(i);
         i++;
@@ -128,7 +128,7 @@ public class RiddleCollection {
 
         r = new Riddle("Found In Heaps",
                 "Found in heaps of equine cuisine.\nYou poke my eye and guide me well,\nLed beneath, lest my mark be seen.\nI wound! Yet heal! None need tell.",
-                "mobia &amp; ludos 2012",
+                "mobia & ludos 2012",
                 "b65840c9c035ddad29c5a0e3f64428d4d5271c16");
         r.setId(i);
         i++;
@@ -136,7 +136,7 @@ public class RiddleCollection {
 
         r = new Riddle("Without You I am Incomplete 1",
                 "Without you I am incomplete\nYou, the earth´s most tasteful treasure,\nI, the opposite of sweet\nIn harmony we come together.",
-                "mobia &amp; ludos 2012",
+                "mobia & ludos 2012",
                 "b295d117135a9763da282e7dae73a5ca7d3e5b11");
         r.setId(i);
         i++;
@@ -144,7 +144,7 @@ public class RiddleCollection {
 
         r = new Riddle("Without You I am Incomplete 2",
                 "Without you I am incomplete\nYou dry your tears and come ashore\nYou white, I black, at last we meet\nBetter to wed than to be pure.",
-                "mobia &amp; ludos 2012",
+                "mobia & ludos 2012",
                 "64356bcfae350c970263c1ce575185b289f7b836");
         r.setId(i);
         i++;
