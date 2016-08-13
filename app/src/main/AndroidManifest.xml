@@ -28,5 +28,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.workingagenda.devinettes.MainActivity"/>
         </activity>
+        <activity
+            android:name="com.workingagenda.devinettes.AboutActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.workingagenda.devinettes.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.workingagenda.devinettes.MainActivity"/>
+        </activity>
     </application>
 </manifest>
