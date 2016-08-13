@@ -42,6 +42,22 @@ public class AboutActivity extends AppCompatActivity {
                 i.setData(Uri.parse("https://github.com/polypmer/devinettes-android"));
                 startActivity(i);
                 return true;
+            case R.id.action_mail:
+                String[] addresses = new String[1];
+                addresses[0] = "exorable.ludos@gmail.com";
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("*/*");
+                intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Riddle Answer Please :)");
+                intent.putExtra(Intent.EXTRA_TEXT, "Please include the Riddle you're interested" +
+                        "in, and the donation amount.");
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
+
+
+                startActivity(intent);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

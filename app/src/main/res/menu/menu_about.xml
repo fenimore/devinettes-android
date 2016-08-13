@@ -4,6 +4,12 @@
     <item
         android:id="@+id/action_source"
         app:showAsAction="always"
-        android:title="Source Code"
+        android:title="Source"
         android:orderInCategory="100"/>
+    <item
+        android:id="@+id/action_mail"
+        app:showAsAction="always"
+        android:title="Mail"
+        android:orderInCategory="200"
+        />
 </menu>
