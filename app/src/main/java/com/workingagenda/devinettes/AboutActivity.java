@@ -63,7 +63,7 @@ public class AboutActivity extends AppCompatActivity {
                 return true;
             case R.id.action_source:
                 Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://github.com/polypmer/devinettes-android"));
+                i.setData(Uri.parse("https://github.com/fenimore/devinettes-android"));
                 startActivity(i);
                 return true;
             case R.id.action_mail:

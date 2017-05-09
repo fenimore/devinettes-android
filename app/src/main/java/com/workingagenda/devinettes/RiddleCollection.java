@@ -118,7 +118,10 @@ public class RiddleCollection {
         r = new Riddle("Without This Common Currency",
                 "Without this common currency,\nCries are quieted, food is bland,\nAll light will lose transparency\nAnd numbness stuns your hand.",
                 "rufus 2013",
-                Arrays.asList("abfde2a7fdf79a571f95f0da0de9762b6a324472"));
+                Arrays.asList("abfde2a7fdf79a571f95f0da0de9762b6a324472",
+                        "e9a38c050834263fce81375d8e3dcdbeec80b082",
+                        "9c061901b889de27061ee5c6a8975ae89fe9be7e",
+                        "c07deae4ebd966b17c07f405dd7d2f1a3d173488"));
         r.setId(i);
         i++;
         riddles.add(r);
@@ -135,7 +138,9 @@ public class RiddleCollection {
         r = new Riddle("When There Is One",
                 "When there is one, it is stood up \nWhen there are two, they\'ve both been true \nWhen there are seven, it is creation \nWhen they\'ve past, their record lasts.",
                 "ludos 2013",
-                Arrays.asList("e927d0677c77241b707442314346326278051dd6"));
+                Arrays.asList("e927d0677c77241b707442314346326278051dd6",
+                        "c09a2565eb3e551d0b33b3f5111b7fd0b90263f4",
+                        "0aa718e58cdf44328d65263f46c9ac1e9b3ecd29"));
         r.setId(i);
         i++;
         riddles.add(r);
@@ -180,7 +185,8 @@ public class RiddleCollection {
         r = new Riddle("Without You I am Incomplete 1",
                 "Without you I am incomplete\nYou, the earth´s most tasteful treasure,\nI, the opposite of sweet\nIn harmony we come together.",
                 "mobia & ludos 2012",
-                Arrays.asList("b295d117135a9763da282e7dae73a5ca7d3e5b11"));
+                Arrays.asList("b295d117135a9763da282e7dae73a5ca7d3e5b11",
+                        ""));
         r.setId(i);
         i++;
         riddles.add(r);
@@ -196,7 +202,8 @@ public class RiddleCollection {
         r = new Riddle("What\'s The Answer",
                 "What\'s the secret to this question\nWhich seems to mean so little?\nYou think you know but think again,\nThe answer is a riddle.",
                 "rufus 2010",
-                Arrays.asList("ecefe3a4d0a5737a74471c289c787880772a293a", "5239eaa08ca1903510fa4e2cf114911d479d7a1e"));
+                Arrays.asList("ecefe3a4d0a5737a74471c289c787880772a293a",
+                        "5239eaa08ca1903510fa4e2cf114911d479d7a1e"));
         r.setId(i);
         i++;
         riddles.add(r);
