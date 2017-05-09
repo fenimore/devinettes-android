@@ -87,7 +87,7 @@ public class RiddleCollection {
         riddles.add(r);
 
         r = new Riddle("Recursion Here",
-                "Recursion here where wont was more:\nMask without a face, coin without wealth.\nNow the think you\'re looking for\nIs nothing other than itself.",
+                "Recursion here where wont was more:\nMask without a face, coin without wealth.\nNow the thing you\'re looking for\nIs nothing other than itself.",
                 "rufus 2013",
                 "25dc282b5a3dcba62a9a777a856c65dd8a4ae8c4");
         r.setId(i);
@@ -175,7 +175,7 @@ public class RiddleCollection {
         riddles.add(r);
 
         r = new Riddle("What\'s The Answer",
-                "What\'s the secret to this question\nWhich seems to mean to little?\nYou think you know but think again,\nThe answer is a riddle.",
+                "What\'s the secret to this question\nWhich seems to mean so little?\nYou think you know but think again,\nThe answer is a riddle.",
                 "rufus 2010",
                 "ecefe3a4d0a5737a74471c289c787880772a293a");
         r.setId(i);
