@@ -33,27 +33,27 @@ public class Riddle implements Parcelable {
 
     private String title;
     private String riddle;
-    private List<String> answer;
+    private List<String> answers;
     private boolean correct;
     private String author;
     private int id;
 
-    public Riddle(String title, String riddle, String author, List<String> answer) {
+    public Riddle(String title, String riddle, String author, List<String> answers) {
         this.title = title;
         this.riddle = riddle;
-        this.answer = answer;
+        this.answers = answers;
         this.author = author;
         this.correct = false;
     }
 
 
 
-    public List<String> getAnswer() {
-        return answer;
+    public List<String> getAnswers() {
+        return this.answers;
     }
 
     public boolean checkAnswer(String hash) {
-        for (String h: this.answer) {
+        for (String h: this.answers) {
             if (h.equals(h)) {
                 return true;
             }
@@ -62,7 +62,7 @@ public class Riddle implements Parcelable {
     }
 
     public void setAnswer(List<String> answer) {
-        this.answer = answer;
+        this.answers = answer;
     }
 
 
@@ -114,11 +114,11 @@ public class Riddle implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(title);
-        parcel.writeString(riddle);
-        parcel.writeStringList(answer);
-        parcel.writeString(author);
-        parcel.writeInt(id);
+        parcel.writeString(this.title);
+        parcel.writeString(this.riddle);
+        parcel.writeStringList(this.answers);
+        parcel.writeString(this.author);
+        parcel.writeInt(this.id);
     }
 
      public static final Parcelable.Creator<Riddle> CREATOR
@@ -133,11 +133,11 @@ public class Riddle implements Parcelable {
      };
 
     private Riddle(Parcel in) {
-        title = in.readString();
-        riddle = in.readString();
-        in.readStringList(answer);
-        author = in.readString();
-        id = in.readInt();
+        this.title = in.readString();
+        this.riddle = in.readString();
+        this.answers = in.createStringArrayList();
+        this.author = in.readString();
+        this.id = in.readInt();
     }
 
 
