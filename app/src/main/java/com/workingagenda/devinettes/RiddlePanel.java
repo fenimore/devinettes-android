@@ -78,7 +78,7 @@ public class RiddlePanel extends AppCompatActivity {
             public void onClick(View view) {
                 String guess = et.getText().toString().toLowerCase();
                 guess = createHash(guess);
-                if(guess.equals(r.getAnswer())){
+                if (r.checkAnswer(guess)) {
                     Toast.makeText(RiddlePanel.this, "Correct!", Toast.LENGTH_SHORT).show();
                     et.setText("");
                     // Save the Score
@@ -135,7 +135,6 @@ public class RiddlePanel extends AppCompatActivity {
                 md = MessageDigest.getInstance("SHA1");
                 byte[] thedigest = md.digest(bytesOfMessage);
                 final char[] HEX_CHARS = "0123456789abcdef".toCharArray();
-                //I think this is the encryption part
                 StringBuilder sb = new StringBuilder(thedigest.length * 2);
                 for (byte b : thedigest) {
                     sb.append(HEX_CHARS[(b & 0xF0) >> 4]);

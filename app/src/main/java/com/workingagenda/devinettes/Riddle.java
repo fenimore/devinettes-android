@@ -24,6 +24,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by fen on 8/10/16.
@@ -32,13 +33,12 @@ public class Riddle implements Parcelable {
 
     private String title;
     private String riddle;
-    // TODO: change to List<>
-    private String answer;
+    private List<String> answer;
     private boolean correct;
     private String author;
     private int id;
 
-    public Riddle(String title, String riddle, String author, String answer) {
+    public Riddle(String title, String riddle, String author, List<String> answer) {
         this.title = title;
         this.riddle = riddle;
         this.answer = answer;
@@ -48,11 +48,20 @@ public class Riddle implements Parcelable {
 
 
 
-    public String getAnswer() {
+    public List<String> getAnswer() {
         return answer;
     }
 
-    public void setAnswer(String answers) {
+    public boolean checkAnswer(String hash) {
+        for (String h: this.answer) {
+            if (h.equals(h)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void setAnswer(List<String> answer) {
         this.answer = answer;
     }
 
@@ -107,7 +116,7 @@ public class Riddle implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(title);
         parcel.writeString(riddle);
-        parcel.writeString(answer);
+        parcel.writeStringList(answer);
         parcel.writeString(author);
         parcel.writeInt(id);
     }
@@ -126,7 +135,7 @@ public class Riddle implements Parcelable {
     private Riddle(Parcel in) {
         title = in.readString();
         riddle = in.readString();
-        answer = in.readString();
+        in.readStringList(answer);
         author = in.readString();
         id = in.readInt();
     }
