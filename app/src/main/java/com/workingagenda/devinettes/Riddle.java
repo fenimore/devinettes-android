@@ -54,7 +54,7 @@ public class Riddle implements Parcelable {
 
     public boolean checkAnswer(String hash) {
         for (String h: this.answers) {
-            if (h.equals(h)) {
+            if (hash.equals(h)) {
                 return true;
             }
         }
